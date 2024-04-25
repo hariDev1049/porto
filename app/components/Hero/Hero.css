@@ -1,18 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body{
+.btn-downloadcv{
     background-image: linear-gradient(
         55deg,
-        #d0e2ec 0%,
+        hsl(201deg 43% 87%) 0%,
         hsl(200deg 32% 90%) 29%,
         hsl(195deg 12% 93%) 43%,
         hsl(9deg 16% 93%) 57%,
         hsl(2deg 33% 91%) 71%,
-        #f0d6d6 100%
+        hsl(0deg 45% 89%) 100%
       );
-}
-html{
-    scroll-behavior: smooth;
 }
