@@ -19,7 +19,7 @@ const config: Config = {
         green: '#5EDC11',
         yellow: '#FFCE22',
         orange: '#FF7222',
-        pink: '#FF22E9',
+        pink: '#f0d6d6',
         blue: '#2260FF',
         purple: {
           DEFAULT: '#5700FF',

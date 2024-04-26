@@ -2,8 +2,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { FaReact } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+
 import { GiDatabase } from 'react-icons/gi';
+import { FaCode } from 'react-icons/fa6';
 function ImgOverlayExample({ element }: { element: any }) {
   return (
     <div className="flex px-10 mt-3" style={{ maxWidth: '85vw' }}>
@@ -27,10 +28,7 @@ function ImgOverlayExample({ element }: { element: any }) {
             </div>
             <div className="flex gap-10 py-2">
               <button className="bg-gray-300 hover:bg-white text-black font-bold py-2 px-4 rounded border-transparent hover:border-black border-2">
-                Source
-              </button>
-              <button className="bg-gray-50 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded border-2 border-black hover:border-none">
-                Demo
+                <FaCode />
               </button>
             </div>
           </Col>

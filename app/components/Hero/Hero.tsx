@@ -57,7 +57,7 @@ const Hero = () => {
       <motion.div
         className={
           themeState.isDark
-            ? 'my-4 text-balance text-(f0d6d6) text-center text-xl w-3/5'
+            ? 'my-4 text-balance text-(f0d6d6) text-center text-xl w-3/5 text-pink'
             : 'text-slate-800 my-4 text-balance text-center text-xl w-3/5'
         }
         initial={{ opacity: 0, left: 100 }}
