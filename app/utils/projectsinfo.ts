@@ -4,7 +4,7 @@ let projectElements = [
     title: 'Sporto - Ecommerce Website',
     description:
       'A fully responsive Ecommerce website created using NextJs and ReactJs. Implemented Paypal payment interface along with Authentication system using Next-Auth and MongoDB as a Database.',
-    techstack: 'ReactJs, NextJs, MongoDB, Next-Auth and TailwindCss',
+    techstack: ['react', 'next', 'mongo', 'next-auth', 'tailwind'],
     image: '/ecomm.jpg',
     gitlink: '',
     demolink: '',
@@ -14,7 +14,7 @@ let projectElements = [
     title: 'My Portfolio - Hariprasad M V',
     description:
       'A fully responsive personal portfolio website created using NextJs, ReactJs and Tailwind. It is enriched with Email functionality for users to send queries to my mailbox.',
-    techstack: 'ReactJs, NextJs and TailwindCss',
+    techstack: ['react', 'next', 'tailwind'],
     image: '/porto.jpg',
     gitlink: '',
     demolink: '',
@@ -24,7 +24,7 @@ let projectElements = [
     title: 'GuFu - Good Food',
     description:
       'A fully responsive Food reciepe application built using ReactJs. It makes use of Googles Firebase for authentication as well as Database to store the reciepe information.',
-    techstack: 'ReactJs, Firebase and TailwindCss',
+    techstack: ['firebase', 'next', 'tailwind'],
     image: '/gufu.jpg',
     gitlink: '',
     demolink: '',

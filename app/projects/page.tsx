@@ -3,8 +3,7 @@ import ProjectCard from '@/app/components/ProjectCard/ProjectCard';
 
 const Projects = () => {
   return (
-    <div className="flex flex-col items-center">
-      <h2 className="text-center capitalize">PROJECTS</h2>
+    <div className="my-5 flex flex-col items-center">
       {projectElements.map((element) => {
         return <ProjectCard key={element.id} element={element} />;
       })}

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
-import { Inter, Manrope } from 'next/font/google';
+import { Inter, Manrope, Montserrat } from 'next/font/google';
 import './globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import AllComp from './components/AllComp/AllComp';
+import { ThemeProvider } from './context/ThemeContext';
 
 const manrope = Manrope({ subsets: ['latin'] });
+
+const monso = Montserrat({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Hariprasad M V',
@@ -19,10 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={manrope.className}>
-        <Header />
-        {children}
-        <Footer />
+      <body className={monso.className}>
+        <ThemeProvider>
+          <AllComp>{children}</AllComp>
+        </ThemeProvider>
       </body>
     </html>
   );

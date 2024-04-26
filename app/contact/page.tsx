@@ -6,9 +6,8 @@ import Header from '../components/Header/Header';
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center w-full my-5">
-      <h2 className="m-5">CONTACT</h2>
-      <Container>
+    <div className="flex flex-col items-center w-full flex-grow">
+      <Container className="mt-5">
         <Row className="max-sm:px-5">
           <Col sm={7}>
             <About />

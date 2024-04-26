@@ -1,16 +1,29 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { FaReact } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { GiDatabase } from 'react-icons/gi';
 function ImgOverlayExample({ element }: { element: any }) {
   return (
-    <div className="flex px-10 mt-5" style={{ maxWidth: '85vw' }}>
+    <div className="flex px-10 mt-3" style={{ maxWidth: '85vw' }}>
       <Container fluid className="bg-white text-balance p-3 rounded">
         <Row>
-          <Col sm={8}>
-            <div>
+          <Col sm={8} className="flex flex-col">
+            <div className="flex-grow flex flex-col">
               <h4>{element.title}</h4>
-              <p>{element.description}</p>
-              <h6>{element.techstack}</h6>
+              <div className="mt-2">
+                <p>{element.description}</p>
+                <div className="flex">
+                  <h3>
+                    <FaReact />
+                  </h3>
+                  <h2></h2>
+                  <h3>
+                    <GiDatabase />
+                  </h3>
+                </div>
+              </div>
             </div>
             <div className="flex gap-10 py-2">
               <button className="bg-gray-300 hover:bg-white text-black font-bold py-2 px-4 rounded border-transparent hover:border-black border-2">

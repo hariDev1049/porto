@@ -1,20 +1,20 @@
-import SchoolIcon from '../SchoolIcon/SchoolIcon';
-import WorkIcon from '../WorkIcon/WorkIcon';
+'use client';
+import SchoolIcon from '@/app/components/SchoolIcon/SchoolIcon';
+import WorkIcon from '@/app/components/WorkIcon/WorkIcon';
 
-import timelineElements from '../../utils/experiencetimeline';
+import timelineElements from '@/app/utils/experiencetimeline';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-const Experience = () => {
+const page = () => {
   let workIconStyle = { background: '#f0d6d6' };
   let schoolIconStyle = { background: '#d0e2ec' };
 
   return (
-    <div>
-      <h2 className="text-center mb-5">EXPERIENCE</h2>
+    <div className="mt-5">
       <VerticalTimeline className="mb-5">
         {timelineElements.map((element) => {
           let isWorkIcon = element.icon === 'work';
@@ -45,4 +45,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default page;
