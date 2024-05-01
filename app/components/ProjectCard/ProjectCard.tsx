@@ -1,9 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { FaReact } from 'react-icons/fa';
-
-import { GiDatabase } from 'react-icons/gi';
 import { FaCode } from 'react-icons/fa6';
 function ImgOverlayExample({ element }: { element: any }) {
   return (
@@ -15,15 +12,11 @@ function ImgOverlayExample({ element }: { element: any }) {
               <h4>{element.title}</h4>
               <div className="mt-2">
                 <p>{element.description}</p>
-                <div className="flex">
-                  <h3>
-                    <FaReact />
-                  </h3>
-                  <h2></h2>
-                  <h3>
-                    <GiDatabase />
-                  </h3>
-                </div>
+                <p>
+                  {element.techstack.map((ele: any, index: any) => (
+                    <li key={index}>{ele}</li>
+                  ))}
+                </p>
               </div>
             </div>
             <div className="flex gap-10 py-2">

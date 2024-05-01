@@ -5,8 +5,10 @@ import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 import { useContext } from 'react';
 import { ThemeContext } from '@/app/context/ThemeContext';
+import { useRouter } from 'next/navigation';
 const Hero = () => {
   const themeState = useContext(ThemeContext);
+  const router = useRouter();
 
   return (
     <motion.div
@@ -87,8 +89,9 @@ const Hero = () => {
               ? 'bg-slate-800 text-white p-3 rounded hover:bg-slate-700'
               : 'bg-slate-100 border-transparent text-slate-800 p-3 rounded hover:bg-slate-200 hover:text-slate-900 hover:border-slate-800'
           }
+          onClick={() => router.push('/contact')}
         >
-          Hire Me
+          DM Me
         </button>
       </div>
     </motion.div>

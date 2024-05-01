@@ -1,9 +1,16 @@
 import { Carousel } from 'react-bootstrap';
 import works from '@/app/utils/achievements';
+import { useContext } from 'react';
+import { ThemeContext } from '@/app/context/ThemeContext';
+
 const ImageCaraousel = () => {
+  const themeState = useContext(ThemeContext);
+
   return (
     <div className="mt-4 bottom-0 flex flex-col max-sm:items-center sm:items-center md:items-start">
-      <h5>Career highlights so far..</h5>
+      <h5 className={themeState.isDark ? 'text-white' : 'text-slate-800'}>
+        Personal Highlights so far..
+      </h5>
       <div className="w-5/6 mb-5">
         <Carousel data-bs-theme="dark" className="mt-3 w-5/6">
           {works.map((work) => {
@@ -16,10 +23,10 @@ const ImageCaraousel = () => {
                     alt={work.title}
                   />
                 </div>
-                <Carousel.Caption className="text-white">
+                {/* <Carousel.Caption className="text-black">
                   <h5>{work.title}</h5>
                   <p>{work.doc}</p>
-                </Carousel.Caption>
+                </Carousel.Caption> */}
               </Carousel.Item>
             );
           })}
