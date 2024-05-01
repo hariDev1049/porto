@@ -16,7 +16,7 @@ let projectElements = [
       'A fully responsive personal portfolio website created using NextJs, ReactJs and Tailwind. It is enriched with Email functionality for users to send queries to my mailbox.',
     techstack: ['react', 'next', 'tailwind'],
     image: '/porto.png',
-    gitlink: '',
+    gitlink: 'https://github.com/hariDev1049/porto',
     demolink: '',
   },
   {
@@ -24,9 +24,9 @@ let projectElements = [
     title: 'GuFu - Good Food',
     description:
       'A fully responsive Food reciepe application built using ReactJs. It makes use of Googles Firebase for authentication as well as Database to store the reciepe information.',
-    techstack: ['firebase', 'next', 'tailwind'],
-    image: '/gufu.jpg',
-    gitlink: '',
+    techstack: ['next', 'tailwind', 'spoonacular API'],
+    image: '/gufu.png',
+    gitlink: 'https://github.com/hariDev1049/gufu',
     demolink: '',
   },
 ];

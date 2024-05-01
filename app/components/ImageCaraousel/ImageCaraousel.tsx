@@ -25,7 +25,6 @@ const ImageCaraousel = () => {
                 </div>
                 {/* <Carousel.Caption className="text-black">
                   <h5>{work.title}</h5>
-                  <p>{work.doc}</p>
                 </Carousel.Caption> */}
               </Carousel.Item>
             );

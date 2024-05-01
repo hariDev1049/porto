@@ -4,7 +4,7 @@ let timelineElements = [
     title: 'Frontend Developer (Senior Software Engineer)',
     location: 'Bangalore, India',
     description:
-      'Created and maintained a rich and efficient GUI for Virtual Machines metadata using React and Next js called LOTUS.',
+      'Created and maintained a rich and efficient GUI for Virtual Machines metadata using React and Next js for a tool called LOTUS.',
     date: 'January 2023 - present',
     icon: 'work',
   },
@@ -13,7 +13,7 @@ let timelineElements = [
     title: 'JAVA RCP Application Developer (Software Engineer)',
     location: 'Bangalore, India',
     description:
-      'A Legacy tool for performing MSR and Autosar related process and ISR validation for better and efficient execution of Tasks inside the ECU of the Car. Taken up the requirements and worked on building a tool to effectively suggest the proper order of execution and generate reports for the same.',
+      'A legacy tool for carrying out Autosar and MSR-related procedures as well as ISR validation for more effective and efficient task execution inside the vehicles ECU. Considering the criteria, I set out to create a program that would efficiently recommend the best sequence of action and produce reports in relation to it.',
     date: 'January 2021 - December 2022',
     icon: 'work',
   },

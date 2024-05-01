@@ -1,8 +1,11 @@
+'use client';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { FaCode } from 'react-icons/fa6';
+import { useRouter } from 'next/navigation';
 function ImgOverlayExample({ element }: { element: any }) {
+  const router = useRouter();
   return (
     <div className="flex px-10 mt-3" style={{ maxWidth: '85vw' }}>
       <Container fluid className="bg-white text-balance p-3 rounded">
@@ -20,8 +23,12 @@ function ImgOverlayExample({ element }: { element: any }) {
               </div>
             </div>
             <div className="flex gap-10 py-2">
-              <button className="bg-gray-300 hover:bg-white text-black font-bold py-2 px-4 rounded border-transparent hover:border-black border-2">
-                <FaCode />
+              <button
+                className="bg-gray-300 hover:bg-white text-black font-bold py-2 px-4 rounded border-transparent hover:border-black border-2 flex justify-center items-center gap-3"
+                onClick={() => router.push(`${element.gitlink}`)}
+              >
+                Source
+                <FaCode className="text-xl" />
               </button>
             </div>
           </Col>

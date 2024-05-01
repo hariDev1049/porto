@@ -68,21 +68,40 @@ const Hero = () => {
         transition={{ duration: 2, delay: 1 }}
       >
         With over 3 years of frontend development experience, my passion for
-        React and Next.js drives me to build scalable and efficient
-        applications. My portfolio reflects a track record of delivering
-        impactful solutions that seamlessly blend user-centric design with
-        cutting-edge technology.
+        <span
+          className={`mx-2 font-extrabold ${
+            themeState.isDark ? 'text-white' : 'text-slate-800'
+          }`}
+        >
+          React
+        </span>
+        and{' '}
+        <span
+          className={`mx-2 font-extrabold ${
+            themeState.isDark ? 'text-white' : 'text-slate-800'
+          }`}
+        >
+          Next.js
+        </span>{' '}
+        drives me to build scalable and efficient applications. My portfolio
+        reflects a track record of delivering impactful solutions that
+        seamlessly blend user-centric design with cutting-edge technology.
       </motion.div>
       <div className="mt-5 flex gap-5">
-        <button
-          className={
-            themeState.isDark
-              ? 'bg-slate-100 text-slate-800 p-3 rounded hover:bg-slate-200 hover:text-slate-900'
-              : 'bg-slate-800 text-white p-3 rounded hover:bg-slate-700'
-          }
+        <a
+          href="/Hariprasad_M_V_Resume.pdf"
+          download="Hariprasad_M_V_Resume.pdf"
         >
-          Download CV
-        </button>
+          <button
+            className={
+              themeState.isDark
+                ? 'bg-slate-100 text-slate-800 p-3 rounded hover:bg-slate-200 hover:text-slate-900'
+                : 'bg-slate-800 text-white p-3 rounded hover:bg-slate-700'
+            }
+          >
+            Download CV
+          </button>
+        </a>
         <button
           className={
             themeState.isDark

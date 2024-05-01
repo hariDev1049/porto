@@ -1,11 +1,15 @@
+'use client';
 import { useEffect, useState } from 'react';
+import Alert from 'react-bootstrap/Alert';
 import Form from 'react-bootstrap/Form';
+import MailModal from '../MailModal/MailModal';
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [subject, setSubject] = useState('');
   const [error, setError] = useState('');
+  const [isOk, setIsOk] = useState(false);
   const [isError, setIsError] = useState(false);
 
   const handleSubmit = async (e: any) => {
@@ -16,7 +20,7 @@ const ContactForm = () => {
       setError('Please provide inputs for all the fields.');
     } else {
       try {
-        await fetch('/api/send', {
+        const response = await fetch('/api/send', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -29,12 +33,23 @@ const ContactForm = () => {
             message: message,
           }),
         });
+        if (response.ok) {
+          setIsOk(true);
+          resetFormData();
+        }
       } catch (error: any) {
+        resetFormData();
         setError(error);
       }
-
-      document.querySelector('form')?.reset();
     }
+  };
+
+  const resetFormData = () => {
+    setEmail('');
+    setIsError(false);
+    setMessage('');
+    setName('');
+    setSubject('');
   };
 
   useEffect(() => {
@@ -44,7 +59,8 @@ const ContactForm = () => {
 
   return (
     <div className="bg-opacity-50 backdrop-blur-md backdrop-filter bg-white p-4 rounded-lg shadow-lg">
-      <Form className="flex flex-col items-center py-5">
+      {isOk ?? <MailModal username={name} />}
+      <Form className="flex flex-col items-center py-5" id="form">
         {isError && <h5 className="text-red-600">{error}</h5>}
 
         <Form.Group className="mb-3 w-4/5" controlId="formBasicName">

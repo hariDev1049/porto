@@ -41,6 +41,12 @@ const works = [
     doc: '12/04/2022',
     image: '/p7.jpg',
   },
+  {
+    id: '8',
+    title: 'CSR Activity',
+    doc: '12/04/2022',
+    image: '/cert.jpg',
+  },
 ];
 
 export default works;
