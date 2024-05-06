@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const About = () => {
   const theme = useContext(ThemeContext);
   if (!theme) {
-    return <div>Loading...</div>;
+    return <div>Loading..!</div>;
   }
   return (
     <motion.div
