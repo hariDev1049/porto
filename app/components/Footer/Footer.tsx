@@ -4,6 +4,9 @@ import { ThemeContext } from '@/app/context/ThemeContext';
 const Footer = () => {
   const theme = useContext(ThemeContext);
 
+  if (!theme) {
+    return <div>Loading...</div>;
+  }
   return (
     <div
       className={

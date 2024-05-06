@@ -20,6 +20,10 @@ const AllComp = ({
     return null;
   }
 
+  if (!themeContext) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div
       className={

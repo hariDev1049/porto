@@ -14,6 +14,10 @@ const Header = () => {
   const themeState = useContext(ThemeContext);
   const pathname = usePathname();
 
+  if (!themeState) {
+    return <div>Loading...</div>;
+  }
+
   const paths = [
     { name: 'Home', path: '/' },
     { name: 'Experience', path: '/experience' },

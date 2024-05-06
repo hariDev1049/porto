@@ -9,6 +9,10 @@ const Hero = () => {
   const themeState = useContext(ThemeContext);
   const router = useRouter();
 
+  if (!themeState) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <motion.div
       className="flex flex-col flex-grow items-center justify-center"

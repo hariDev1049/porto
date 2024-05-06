@@ -6,6 +6,10 @@ import { ThemeContext } from '@/app/context/ThemeContext';
 const ImageCaraousel = () => {
   const themeState = useContext(ThemeContext);
 
+  if (!themeState) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="mt-4 bottom-0 flex flex-col max-sm:items-center sm:items-center md:items-start">
       <h5 className={themeState.isDark ? 'text-white' : 'text-slate-800'}>

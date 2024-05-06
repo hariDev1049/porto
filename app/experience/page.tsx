@@ -16,6 +16,9 @@ const page = () => {
   let workIconStyle = { background: '#f0d6d6' };
   let schoolIconStyle = { background: '#d0e2ec' };
 
+  if (!theme) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="mt-5">
       <VerticalTimeline className="mb-5">

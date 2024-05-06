@@ -2,7 +2,6 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import ContactForm from '@/app/components/ContactForm/ContactForm';
 import About from '@/app/components/About/About';
-import Header from '../components/Header/Header';
 
 const Contact = () => {
   return (

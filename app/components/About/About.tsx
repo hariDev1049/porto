@@ -1,10 +1,12 @@
-import React from 'react';
 import ImageCaraousel from '../ImageCaraousel/ImageCaraousel';
 import { ThemeContext } from '@/app/context/ThemeContext';
 import { useContext } from 'react';
 import { motion } from 'framer-motion';
 const About = () => {
   const theme = useContext(ThemeContext);
+  if (!theme) {
+    return <div>Loading...</div>;
+  }
   return (
     <motion.div
       className={
