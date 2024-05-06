@@ -1,8 +1,9 @@
 'use client';
 import { useEffect, useState } from 'react';
-import Alert from 'react-bootstrap/Alert';
 import Form from 'react-bootstrap/Form';
-import MailModal from '../MailModal/MailModal';
+import { toast } from 'react-toastify';
+import { motion } from 'framer-motion';
+import 'react-toastify/dist/ReactToastify.css';
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -20,19 +21,26 @@ const ContactForm = () => {
       setError('Please provide inputs for all the fields.');
     } else {
       try {
-        const response = await fetch('/api/send', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-          },
-          body: JSON.stringify({
-            username: name,
-            email: email,
-            subject: subject,
-            message: message,
+        const response = await toast.promise(
+          fetch('/api/send', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json',
+            },
+            body: JSON.stringify({
+              username: name,
+              email: email,
+              subject: subject,
+              message: message,
+            }),
           }),
-        });
+          {
+            pending: 'Sending your mail..!',
+            success: `Hey ${name}! I got your mail.`,
+            error: 'Error in sending mail. ',
+          }
+        );
         if (response.ok) {
           setIsOk(true);
           resetFormData();
@@ -58,8 +66,13 @@ const ContactForm = () => {
   }, [name, email, message, subject]);
 
   return (
-    <div className="bg-opacity-50 backdrop-blur-md backdrop-filter bg-white p-4 rounded-lg shadow-lg">
-      {isOk ?? <MailModal username={name} />}
+    <motion.div
+      className="bg-opacity-50 backdrop-blur-md backdrop-filter bg-white p-4 rounded-lg shadow-lg"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 1 }}
+      transition={{ duration: 0.7, delay: 0.5 }}
+    >
       <Form className="flex flex-col items-center py-5" id="form">
         {isError && <h5 className="text-red-600">{error}</h5>}
 
@@ -106,10 +119,10 @@ const ContactForm = () => {
           disabled={isError}
           onClick={handleSubmit}
         >
-          Send Message
+          {isOk ? 'Sent' : 'Send message'}
         </button>
       </Form>
-    </div>
+    </motion.div>
   );
 };
 

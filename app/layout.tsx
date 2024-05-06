@@ -4,6 +4,8 @@ import './globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AllComp from './components/AllComp/AllComp';
 import { ThemeProvider } from './context/ThemeContext';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const manrope = Manrope({ subsets: ['latin'] });
 
@@ -24,6 +26,7 @@ export default function RootLayout({
       <body className={monso.className}>
         <ThemeProvider>
           <AllComp>{children}</AllComp>
+          <ToastContainer position="bottom-right" />
         </ThemeProvider>
       </body>
     </html>

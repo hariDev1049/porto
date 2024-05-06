@@ -2,15 +2,20 @@ import React from 'react';
 import ImageCaraousel from '../ImageCaraousel/ImageCaraousel';
 import { ThemeContext } from '@/app/context/ThemeContext';
 import { useContext } from 'react';
+import { motion } from 'framer-motion';
 const About = () => {
   const theme = useContext(ThemeContext);
   return (
-    <div
+    <motion.div
       className={
         theme.isDark
           ? 'text-pink flex items-start flex-col'
           : 'text-slate-800 flex items-start flex-col'
       }
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 0.5 }}
     >
       <div className="max-sm:flex flex-col items-center">
         <h3
@@ -29,7 +34,7 @@ const About = () => {
         </p>
       </div>
       <ImageCaraousel />
-    </div>
+    </motion.div>
   );
 };
 

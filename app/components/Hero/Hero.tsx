@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 import { useContext } from 'react';
@@ -62,8 +61,8 @@ const Hero = () => {
             ? 'my-4 text-balance text-(f0d6d6) text-center text-xl w-3/5 text-pink'
             : 'text-slate-800 my-4 text-balance text-center text-xl w-3/5'
         }
-        initial={{ opacity: 0, left: 100 }}
-        animate={{ opacity: 1, left: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 1 }}
         transition={{ duration: 2, delay: 1 }}
       >
