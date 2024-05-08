@@ -36,7 +36,7 @@ const Header = () => {
       <Container>
         <div className="flex gap-14">
           <h4>
-            <Link href="https://github.com/hariDev1049">
+            <Link href="https://github.com/hariDev1049" target="_blank">
               <FaGithub
                 className={
                   checked ? 'text-slate-800 text-2xl' : 'text-white text-2xl'
@@ -45,7 +45,7 @@ const Header = () => {
             </Link>
           </h4>
           <h4>
-            <Link href="https://www.linkedin.com/in/hari-prasad-dev1049/">
+            <Link href="https://www.linkedin.com/in/hari-prasad-dev1049/" target="_blank">
               <FaLinkedin
                 className={
                   checked ? 'text-slate-800 text-2xl' : 'text-white text-2xl'
