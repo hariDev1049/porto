@@ -46,7 +46,7 @@ const Header = () => {
           } sm:justify-normal justify-evenly gap-14`}
         >
           <h4>
-            <Link href="https://github.com/hariDev1049">
+            <Link href="https://github.com/hariDev1049" target="_blank">
               <FaGithub
                 className={
                   checked
@@ -57,7 +57,7 @@ const Header = () => {
             </Link>
           </h4>
           <h4>
-            <Link href="https://www.linkedin.com/in/hari-prasad-dev1049/">
+            <Link href="https://www.linkedin.com/in/hari-prasad-dev1049/" target="_blank">
               <FaLinkedin
                 className={
                   checked
