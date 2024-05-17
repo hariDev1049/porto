@@ -15,7 +15,7 @@ const Footer = () => {
           : ' text-slate-800 w-full h-12 flex justify-center items-center'
       }
     >
-      <p className="text-center my-2">
+      <p className="text-center my-2 text-sm sm:text-lg">
         Copyrights reserved by{' '}
         <span className="font-bold ml-1">Hariprasad M V.</span>
       </p>

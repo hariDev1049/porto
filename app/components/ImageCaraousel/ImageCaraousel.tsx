@@ -15,7 +15,7 @@ const ImageCaraousel = () => {
       <h5 className={themeState.isDark ? 'text-white' : 'text-slate-800'}>
         Personal Highlights so far..
       </h5>
-      <div className="w-5/6 mb-5">
+      <div className="w-5/6 mb-5 flex justify-center">
         <Carousel data-bs-theme="dark" className="mt-3 w-5/6">
           {works.map((work) => {
             return (

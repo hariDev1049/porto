@@ -20,7 +20,7 @@ const page = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="mt-5">
+    <div className="mt-2 sm:mt-5">
       <VerticalTimeline className="mb-5">
         {timelineElements.map((element) => {
           let isWorkIcon = element.icon === 'work';
@@ -33,7 +33,7 @@ const page = () => {
               dateClassName="date"
               iconStyle={isWorkIcon ? workIconStyle : schoolIconStyle}
               icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
-              className={theme.isDark ? 'text-pink' : 'text-slate-800'}
+              className={`theme.isDark ? 'text-pink' : 'text-slate-800' pr-5`}
             >
               <h4 className="vertical-timeline-element-title font-semibold text-slate-800">
                 {element.title}

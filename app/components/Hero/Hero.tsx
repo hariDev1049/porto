@@ -29,16 +29,16 @@ const Hero = () => {
           alt="Picture of the author"
           style={{
             objectFit: 'cover',
-            borderRadius: '100px', //👈 and here you can select border radius
+            borderRadius: '100px',
           }}
         />
       </div>
-      <div className="flex mt-5">
+      <div className="md:flex text-center sm:mt-5 text-balance mt-2">
         <h1
           className={
             themeState.isDark
-              ? 'text-(f0d6d6) text-6xl'
-              : 'text-slate-800 text-6xl'
+              ? 'text-(f0d6d6) sm:text-6xl text-balance'
+              : 'text-slate-800 sm:text-6xl text-balance'
           }
         >
           Hello, I'm {''}
@@ -46,8 +46,8 @@ const Hero = () => {
         <h1
           className={
             themeState.isDark
-              ? 'text-(f0d6d6) font-bold ml-2 text-6xl'
-              : 'text-slate-800 font-bold ml-2 text-6xl'
+              ? 'text-(f0d6d6) font-bold ml-2 sm:text-6xl'
+              : 'text-slate-800 font-bold ml-2 sm:text-6xl'
           }
         >
           <Typewriter
@@ -62,35 +62,37 @@ const Hero = () => {
       <motion.div
         className={
           themeState.isDark
-            ? 'my-4 text-balance text-(f0d6d6) text-center text-xl w-3/5 text-pink'
-            : 'text-slate-800 my-4 text-balance text-center text-xl w-3/5'
+            ? 'my-4 text-balance text-(f0d6d6) text-center text-xl w-4/5 sm:w-3/5 text-pink'
+            : 'text-slate-800 my-4 text-balance text-center text-xl w-4/5 sm:3/5'
         }
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 1 }}
         transition={{ duration: 2, delay: 1 }}
       >
-        With over 3 years of frontend development experience, my passion for
-        <span
-          className={`mx-2 font-extrabold ${
-            themeState.isDark ? 'text-white' : 'text-slate-800'
-          }`}
-        >
-          React
-        </span>
-        and{' '}
-        <span
-          className={`mx-2 font-extrabold ${
-            themeState.isDark ? 'text-white' : 'text-slate-800'
-          }`}
-        >
-          Next.js
-        </span>{' '}
-        drives me to build scalable and efficient applications. My portfolio
-        reflects a track record of delivering impactful solutions that
-        seamlessly blend user-centric design with cutting-edge technology.
+        <p className="text-xs sm:text-lg w-full">
+          With over 3 years of frontend development experience, my passion for
+          <span
+            className={`mx-2 font-extrabold ${
+              themeState.isDark ? 'text-white' : 'text-slate-800'
+            }`}
+          >
+            React
+          </span>
+          and{' '}
+          <span
+            className={`mx-2 font-extrabold ${
+              themeState.isDark ? 'text-white' : 'text-slate-800'
+            }`}
+          >
+            Next.js
+          </span>{' '}
+          drives me to build scalable and efficient applications. My portfolio
+          reflects a track record of delivering impactful solutions that
+          seamlessly blend user-centric design with cutting-edge technology.
+        </p>
       </motion.div>
-      <div className="mt-5 flex gap-5">
+      <div className=" sm:mt-5 flex gap-5">
         <a
           href="/Hariprasad_M_V_Resume.pdf"
           download="Hariprasad_M_V_Resume.pdf"
@@ -98,8 +100,8 @@ const Hero = () => {
           <button
             className={
               themeState.isDark
-                ? 'bg-slate-100 text-slate-800 p-3 rounded hover:bg-slate-200 hover:text-slate-900'
-                : 'bg-slate-800 text-white p-3 rounded hover:bg-slate-700'
+                ? 'bg-slate-100 text-slate-800 p-2 sm:p-3 rounded hover:bg-slate-200 hover:text-slate-900 sm:text-lg text-sm'
+                : 'bg-slate-800 text-white p-2 sm:p-3 rounded hover:bg-slate-700 sm:text-lg text-sm'
             }
           >
             Download CV
@@ -108,8 +110,8 @@ const Hero = () => {
         <button
           className={
             themeState.isDark
-              ? 'bg-slate-800 text-white p-3 rounded hover:bg-slate-700'
-              : 'bg-slate-100 border-transparent text-slate-800 p-3 rounded hover:bg-slate-200 hover:text-slate-900 hover:border-slate-800'
+              ? 'bg-slate-800 text-white sm:p-3 p-2 rounded hover:bg-slate-700 sm:text-lg text-sm'
+              : 'bg-slate-100 border-transparent text-slate-800 sm:p-3 p-2 rounded hover:bg-slate-200 hover:text-slate-900 hover:border-slate-800 sm:text-lg text-sm'
           }
           onClick={() => router.push('/contact')}
         >
