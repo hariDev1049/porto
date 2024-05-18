@@ -73,10 +73,10 @@ const ContactForm = () => {
       exit={{ opacity: 1 }}
       transition={{ duration: 0.7, delay: 0.5 }}
     >
-      <Form className="flex flex-col items-center py-5" id="form">
+      <Form className="flex flex-col items-center sm:py-5 py-2" id="form">
         {isError && <h5 className="text-red-600">{error}</h5>}
 
-        <Form.Group className="mb-3 w-4/5" controlId="formBasicName">
+        <Form.Group className="mb-3 sm:w-4/5 w-full" controlId="formBasicName">
           <Form.Label>Name</Form.Label>
           <Form.Control
             type="text"
@@ -85,7 +85,7 @@ const ContactForm = () => {
             onChange={(e) => setName(e.target.value)}
           />
         </Form.Group>
-        <Form.Group className="mb-3 w-4/5" controlId="formBasicEmail">
+        <Form.Group className="mb-3 sm:w-4/5 w-full" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
             type="email"
@@ -94,7 +94,10 @@ const ContactForm = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
-        <Form.Group className="mb-3 w-4/5" controlId="formBasicSubject">
+        <Form.Group
+          className="mb-3 sm:w-4/5 w-full"
+          controlId="formBasicSubject"
+        >
           <Form.Label>Subject</Form.Label>
           <Form.Control
             type="text"
@@ -103,7 +106,10 @@ const ContactForm = () => {
             onChange={(e) => setSubject(e.target.value)}
           />
         </Form.Group>
-        <Form.Group className="mb-3 w-4/5" controlId="formBasicMessage">
+        <Form.Group
+          className="mb-3 sm:w-4/5 w-full"
+          controlId="formBasicMessage"
+        >
           <Form.Label>Message</Form.Label>
           <Form.Control
             as="textarea"

@@ -57,7 +57,10 @@ const Header = () => {
             </Link>
           </h4>
           <h4>
-            <Link href="https://www.linkedin.com/in/hari-prasad-dev1049/" target="_blank">
+            <Link
+              href="https://www.linkedin.com/in/hari-prasad-dev1049/"
+              target="_blank"
+            >
               <FaLinkedin
                 className={
                   checked
@@ -84,9 +87,9 @@ const Header = () => {
             />
           </div>
           <GiHamburgerMenu
-            className={`${
-              isOpen ? 'hidden' : 'flex'
-            } text-2xl text-white sm:hidden`}
+            className={`${isOpen ? 'hidden' : 'flex'} text-2xl ${
+              checked ? 'text-slate-800' : 'text-white'
+            } sm:hidden`}
             onClick={handleClick}
           />
         </div>
@@ -136,9 +139,9 @@ const Header = () => {
         >
           <div className="w-full flex justify-end ">
             <IoIosCloseCircleOutline
-              className={`${
-                isOpen ? 'flex sm:hidden' : 'hidden'
-              } text-2xl text-white `}
+              className={`${isOpen ? 'flex sm:hidden' : 'hidden'} text-2xl ${
+                checked ? 'text-slate-800' : 'text-white'
+              } `}
               onClick={handleClick}
             />
           </div>
