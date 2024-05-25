@@ -30,10 +30,12 @@ const page = () => {
               visible={true}
               key={element.id}
               date={element.date}
-              dateClassName="date"
+              dateClassName={`date `}
               iconStyle={isWorkIcon ? workIconStyle : schoolIconStyle}
               icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
-              className={`theme.isDark ? 'text-pink' : 'text-slate-800' pr-5`}
+              className={`${
+                theme.isDark ? 'text-white' : 'text-slate-800'
+              } pr-5`}
             >
               <h4 className="vertical-timeline-element-title font-semibold text-slate-800">
                 {element.title}
