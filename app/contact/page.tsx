@@ -6,7 +6,7 @@ import About from '@/app/components/About/About';
 const Contact = () => {
   return (
     <div className="flex flex-col items-center w-full flex-grow">
-      <Container className="mt-5">
+      <Container className="sm:mt-5">
         <Row className="max-sm:px-5">
           <Col sm={7}>
             <About />

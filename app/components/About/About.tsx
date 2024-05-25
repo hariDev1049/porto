@@ -23,8 +23,8 @@ const About = () => {
         <h3
           className={
             theme.isDark
-              ? 'text-white font-bold md:mt-20'
-              : 'font-bold md:mt-20'
+              ? 'text-white font-bold mt-5 sm:mt-5'
+              : 'font-bold mt-5 sm:mt-5'
           }
         >
           About Me

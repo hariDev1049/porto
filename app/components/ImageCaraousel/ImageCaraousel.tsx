@@ -11,11 +11,11 @@ const ImageCaraousel = () => {
   }
 
   return (
-    <div className="mt-4 bottom-0 flex flex-col max-sm:items-center sm:items-center md:items-start">
+    <div className="mt-4 bottom-0 flex flex-col items-center sm:items-start">
       <h5 className={themeState.isDark ? 'text-white' : 'text-slate-800'}>
         Personal Highlights so far..
       </h5>
-      <div className="w-5/6 mb-5 flex justify-center">
+      <div className="w-3/4 mb-5 flex justify-center sm:justify-start">
         <Carousel data-bs-theme="dark" className="mt-3 w-5/6">
           {works.map((work) => {
             return (
@@ -27,9 +27,9 @@ const ImageCaraousel = () => {
                     alt={work.title}
                   />
                 </div>
-                {/* <Carousel.Caption className="text-black">
+                <Carousel.Caption className="text-white font-semibold">
                   <h5>{work.title}</h5>
-                </Carousel.Caption> */}
+                </Carousel.Caption>
               </Carousel.Item>
             );
           })}

@@ -15,7 +15,7 @@ import { motion } from 'framer-motion';
 function ImgOverlayExample({ element }: { element: any }) {
   const router = useRouter();
   return (
-    <div className="flex px-10 mt-3 sm:w-80">
+    <div className="flex px-10 my-3 sm:w-3/4">
       <Container fluid className="bg-white text-balance p-3 rounded">
         <Row>
           <Col sm={8} className="flex flex-col overflow-hidden">

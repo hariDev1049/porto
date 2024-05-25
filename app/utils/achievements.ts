@@ -1,13 +1,13 @@
 const works = [
   {
     id: '1',
-    title: 'ISTQB Foundation Level Certification',
+    title: '',
     doc: '12/04/2022',
     image: '/FLCST.jpeg',
   },
   {
     id: '2',
-    title: 'Product Design Fundamentals from Udemy',
+    title: '',
     doc: '12/04/2022',
     image: '/product-design.jpg',
   },
@@ -43,7 +43,7 @@ const works = [
   },
   {
     id: '8',
-    title: 'CSR Activity',
+    title: '',
     doc: '12/04/2022',
     image: '/cert.jpg',
   },
