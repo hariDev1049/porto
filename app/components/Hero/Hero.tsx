@@ -93,10 +93,7 @@ const Hero = () => {
         </p>
       </motion.div>
       <div className=" sm:mt-5 flex gap-5">
-        <a
-          href="/Hariprasad_M_V_Resume.pdf"
-          download="Hariprasad_M_V_Resume.pdf"
-        >
+        <a href="/Hariprasad_M_V_CV.pdf" download="Hariprasad_M_V_CV.pdf">
           <button
             className={
               themeState.isDark
