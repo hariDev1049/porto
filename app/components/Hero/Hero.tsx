@@ -71,7 +71,7 @@ const Hero = () => {
         transition={{ duration: 2, delay: 1 }}
       >
         <p className="text-xs sm:text-lg w-full">
-          With over 3 years of frontend development experience, my passion for
+          With over 4+ years of frontend development experience, my passion for
           <span
             className={`mx-2 font-extrabold ${
               themeState.isDark ? 'text-white' : 'text-slate-800'
